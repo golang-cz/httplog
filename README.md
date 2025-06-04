@@ -69,7 +69,7 @@ func main() {
 
 		// Optionally, filter out some request logs.
 		Skip: func(req *http.Request, respStatus int) bool {
-			return respStatus == 404 || respStatus == 405
+			return respStatus == 404 || respStatus == 405 || respStatus == 429
 		},
 
 		// Optionally, log selected request/response headers explicitly.
